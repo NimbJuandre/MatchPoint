@@ -1,17 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <AppContent />
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppContent from "./components/AppContent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    AppContent,
+  },
+  // created() {
+  //   if (this.$workbox) {
+  //     this.$workbox.addEventListener("waiting", () => {
+  //       this.showUpgradeUI = true;
+  //     });
+  //   }
+  // },
+
+  // methods: {
+  //   async accept() {
+  //     this.showUpgradeUI = false
+  //     await this.$workbox.messageSW({ type: "SKIP_WAITING" });
+  //   }
+  // },
+};
 </script>
 
 <style>
